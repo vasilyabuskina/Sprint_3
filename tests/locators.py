@@ -1,0 +1,33 @@
+from selenium.webdriver.common.by import By
+
+
+class TestLocators():
+    LOGIN_IN_ACCOUNT_BUTTON = By.XPATH, "//button[contains(text(),'Войти в аккаунт')]" #кнопка "Войти в аккаунт" на главной стр
+    PROFILE_BUTTON = By.XPATH, "//p[contains(text(),'Личный Кабинет')]"               #кнопка "Личный кабинет" на главной ст
+    LOGIN_BUTTON = By.XPATH, "// button[text() = 'Войти']"     #кнопка "Войти" на странице login
+    LOGIN_LINK_ON_REG_FORM = By.XPATH, "//a[contains(text(),'Войти')]" #ссылка "Войти" на странице login и стр восстановления пароля
+    EMAIL_FIELD_IN_LOGIN_FORM = By.XPATH, "//fieldset[1]/div[1]/div[1]/input[1]" #поле email в форме login
+    PASSWORD_FIELD_IN_LOGIN_FORM = By.XPATH, "//fieldset[2]/div[1]/div[1]/input[1]" #поле password в форме login
+
+    NAME_FIELD_IN_REG_FORM = By.XPATH, "//fieldset[1]/div[1]/div[1]/input[1]"    # поле Имя в форме регистрации
+    EMAIL_FIELD_IN_REG_FORM = By.XPATH, "//fieldset[2]/div[1]/div[1]/input[1]"  #поле email в форме регистрации
+    PASSWORD_FIELD_IN_REG_FORM = By.XPATH, "//fieldset[3]/div[1]/div[1]/input[1]"  #поле Пароль в форме регистрации
+    REGISTRATION_LINK = By.XPATH, "//a[contains(text(),'Зарегистрироваться')]" #ссылкаЗарегистрироваться
+    REGISTRATION_BUTTON = By.XPATH, "//button[contains(text(),'Зарегистрироваться')]" #кнопкаЗарегистрироваться
+    LOGIN_TEXT_AFTER_REG = By.XPATH, "//h2[contains(text(),'Вход')]"  # надпись вход
+
+    PASSWORD_RESET_BUTTON =By.XPATH, "//a[contains(text(),'Восстановить пароль')]" #Восстановить пароль
+    LOGOUT_BUTTON = By.XPATH, "//button[contains(text(),'Выход')]" #Выход
+    CONSTRUCTOR_BUTTON = By.XPATH, "// p[text() = 'Конструктор']" #Конструктор
+    ASSEMBLE_BURGER = By.XPATH, "// h1[contains(text(), 'Соберите бургер')]" #Соберите бургер
+    STELLAR_BURGERS_LOGO = By.XPATH, "//header/nav[1]/div[1]/a[1]" #stellar burgers logo
+    SAUCES = By.XPATH, "//span[contains(text(),'Соусы')]"
+    BUNS = By.XPATH, "//span[contains(text(),'Булки')]"
+    FILLINGS = By.XPATH, "//span[contains(text(),'Начинки')]"
+    WRONG_PASSWORD = By.XPATH, "//p[contains(text(), 'Некорректный пароль')]"
+
+
+
+
+
+
