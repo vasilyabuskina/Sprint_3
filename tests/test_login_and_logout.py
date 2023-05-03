@@ -50,5 +50,4 @@ class TestLogin:
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.LOGOUT_BUTTON)).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.PROFILE_BUTTON)).click()
         log = WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.LOGIN_TEXT_AFTER_REG)).text
-        print(log)
         assert log == "Вход"

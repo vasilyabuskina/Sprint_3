@@ -24,7 +24,7 @@ class TestLocators():
     SAUCES = By.XPATH, "//span[contains(text(),'Соусы')]"  # Соусы
     BUNS = By.XPATH, "//span[contains(text(),'Булки')]"  # Булки
     FILLINGS = By.XPATH, "//span[contains(text(),'Начинки')]"  # Начинки
-    WRONG_PASSWORD = By.XPATH, "//p[contains(text(), 'Некорректный пароль')]"
-    NAME_FIELD_IN_PROFILE = By.XPATH, "//input[@name='Name']"
+    WRONG_PASSWORD = By.XPATH, "//p[contains(text(), 'Некорректный пароль')]"  # Некорректный пароль
+    NAME_FIELD_IN_PROFILE = By.XPATH, "//input[@name='Name']"  # Поле Имя в личном кабинете
     PREVIOUS_ORDERS = By.XPATH, "//a[contains(text(),'Профиль')]"  # Профиль
     BEEF_METEORITE = By.XPATH, "//p[contains(text(),'Говяжий метеорит (отбивная)')]"  # Говяжий метеорит

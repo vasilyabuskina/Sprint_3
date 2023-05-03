@@ -9,14 +9,13 @@ faker = Faker()
 class TestRegistration:
     def test_reg_success(self, driver):
         email = faker.email()
-        # print(email)
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.PROFILE_BUTTON)).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.REGISTRATION_LINK)).click()
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.NAME_FIELD_IN_REG_FORM)).send_keys('Vasilia')
         driver.find_element(*TestLocators.EMAIL_FIELD_IN_REG_FORM).send_keys(email)
         driver.find_element(*TestLocators.PASSWORD_FIELD_IN_REG_FORM).send_keys('yandex123')
         driver.find_element(*TestLocators.REGISTRATION_BUTTON).click()
-        # проверка есть ли зарегистрированный пользователь
+
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.LOGIN_BUTTON)).click()
         driver.find_element(*TestLocators.EMAIL_FIELD_IN_LOGIN_FORM).send_keys(email)
         driver.find_element(*TestLocators.PASSWORD_FIELD_IN_LOGIN_FORM).send_keys('yandex123')
@@ -35,8 +34,6 @@ class TestRegistration:
         driver.find_element(*TestLocators.PASSWORD_FIELD_IN_REG_FORM).send_keys('yand1')
         WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.REGISTRATION_BUTTON)).click()
         wrong = WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.WRONG_PASSWORD)).text
-        print(wrong)
-        WebDriverWait(driver, 3).until(EC.visibility_of_element_located(TestLocators.WRONG_PASSWORD))
         assert wrong == "Некорректный пароль"
 
     def test_registration_empty_name_did_not_registered(self,driver):
