@@ -6,12 +6,12 @@ class TestLocators():
     PROFILE_BUTTON = By.XPATH, "//p[contains(text(),'Личный Кабинет')]"  # кнопка "Личный кабинет" на главной ст
     LOGIN_BUTTON = By.XPATH, "// button[text() = 'Войти']"  # кнопка "Войти" на странице login
     LOGIN_LINK_ON_REG_FORM = By.XPATH, "//a[contains(text(),'Войти')]"  # ссылка "Войти" на странице login и стр восстановления пароля
-    EMAIL_FIELD_IN_LOGIN_FORM = By.XPATH, "//fieldset[1]/div[1]/div[1]/input[1]"  # поле email в форме login
-    PASSWORD_FIELD_IN_LOGIN_FORM = By.XPATH, "//fieldset[2]/div[1]/div[1]/input[1]"  # поле password в форме login
+    EMAIL_FIELD_IN_LOGIN_FORM = By.XPATH, "//label[text()='Email']/following-sibling::input"  # поле email в форме login
+    PASSWORD_FIELD_IN_LOGIN_FORM = By.XPATH, "//label[text()='Пароль']/following-sibling::input"  # поле password в форме login
 
-    NAME_FIELD_IN_REG_FORM = By.XPATH, "//fieldset[1]/div[1]/div[1]/input[1]"  # поле Имя в форме регистрации
-    EMAIL_FIELD_IN_REG_FORM = By.XPATH, "//fieldset[2]/div[1]/div[1]/input[1]"  # поле email в форме регистрации
-    PASSWORD_FIELD_IN_REG_FORM = By.XPATH, "//fieldset[3]/div[1]/div[1]/input[1]"  # поле Пароль в форме регистрации
+    NAME_FIELD_IN_REG_FORM = By.XPATH, "//label[text()='Имя']/following-sibling::input"  # поле Имя в форме регистрации
+    EMAIL_FIELD_IN_REG_FORM = By.XPATH, "//label[text()='Email']/following-sibling::input"  # поле email в форме регистрации
+    PASSWORD_FIELD_IN_REG_FORM = By.XPATH, "//label[text()='Пароль']/following-sibling::input"  # поле Пароль в форме регистрации
     REGISTRATION_LINK = By.XPATH, "//a[contains(text(),'Зарегистрироваться')]"  # ссылка Зарегистрироваться
     REGISTRATION_BUTTON = By.XPATH, "//button[contains(text(),'Зарегистрироваться')]"  # кнопка Зарегистрироваться
     LOGIN_TEXT_AFTER_REG = By.XPATH, "//h2[contains(text(),'Вход')]"  # надпись вход
