@@ -9,7 +9,7 @@ from tests.locators import TestLocators
 
 url = 'https://stellarburgers.nomoreparties.site/'
 
-@pytest.fixture(scope='function')
+@pytest.fixture()
 def driver():
     options = Options()
     options.add_argument("--window-size=1200,800")
@@ -20,7 +20,7 @@ def driver():
     yield browser
     browser.quit()
 
-@pytest.fixture(scope='function')
+@pytest.fixture()
 def login(driver):
     driver.find_element(*TestLocators.LOGIN_IN_ACCOUNT_BUTTON).click()
     WebDriverWait(driver, 3).until(EC.visibility_of_element_located((TestLocators.LOGIN_TEXT_AFTER_REG)))
@@ -28,11 +28,3 @@ def login(driver):
     driver.find_element(*TestLocators.PASSWORD_FIELD_IN_LOGIN_FORM).send_keys('yandex123')
     driver.find_element(*TestLocators.LOGIN_BUTTON).click()
     return driver
-
-@pytest.fixture(scope='function')
-def findw(driver):
-    return lambda locator: WebDriverWait(driver, 3).until(EC.visibility_of_element_located(locator))
-
-@pytest.fixture(scope='function')
-def find(driver):
-    return lambda locator: driver.find_element(*locator)
